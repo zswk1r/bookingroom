@@ -19,7 +19,14 @@ async def serve_frontend():
 async def custom_swagger_ui_html():
     return get_swagger_ui_html(
         openapi_url=app.openapi_url,
-        title="RoomMate API"
+        title="RoomMate",
+        swagger_ui_parameters={
+            "displayRequestDuration": True,
+            "defaultModelsExpandDepth": -1,
+            "deepLinking": True
+        },
+        oauth2_redirect_url=app.swagger_ui_oauth2_redirect_url,
+        init_oauth=app.swagger_ui_init_oauth
     )
 @app.get("/health", tags=["System"])
 async def health():

@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #4f46e5;
+    --bg-gradient: linear-gradient(135deg, #f6f8fd 0%, #f1f4f9 100%);
+}
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: #333;
+}
+.card { 
+    border: none;
+    border-radius: 16px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    margin-bottom: 2rem; 
+}
+.btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+.btn-primary:hover { background-color: #4338ca; border-color: #4338ca; }
+.accordion-button:not(.collapsed) { 
+    background-color: #eef2ff; 
+    color: var(--primary-color); 
+}
+.accordion-button:focus { box-shadow: none; }
+.modal-content { border: none; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+
+.dropdown-menu {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+.dropdown-item:active { background-color: var(--primary-color); }
+
+.swagger-ui .info .base-url {
+    display: none !important;
+}
+.swagger-ui .info a[href$="/openapi.json"] {
+    display: none !important;
+}
